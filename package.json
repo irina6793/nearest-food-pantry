@@ -1,0 +1,11 @@
+{
+  "name": "nearest-food-pantry",
+  "version": "1.0.0",
+  "description": "The nearest food pantry application for users to find the nearest location",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "Irina",
+  "license": "ISC"
+}
