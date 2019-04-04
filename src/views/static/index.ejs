@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+    <% include ../static/partials/navbar.ejs %>
+    <% include ../static/partials/baseScripts.ejs %>
+  </head>
+  <body>
+          <main class="container">
+          <header class="jumbotron my-4">
+          <h1 class="display-3">Welcome</h1>
+          <p class="lead">An application for users to find their nearest food pantry.</p>
+          <a href="/user/sign_up" class="btn btn-primary btn-lg">Sign up</a>
+        </header>
+
+        <section class="row text-center">
+        <section class="col-lg-4">
+            <h4 class="card-title">Zip Code Lookup</h4>
+            <p class="card-text">Include your zip code to find the nearest food pantry</p>
+          </section>
+          <section class="col-lg-4">
+            <h4 class="card-title">Healthy Food</h4>
+            <p class="card-text">Your list of healthy food options and what you are looking for!</p>
+          </section>
+          <section class="col-lg-4">
+            <h4 class="card-title">Stay Informed</h4>
+            <p class="card-text">See the food pantries that have what you need to stay healthy!</p>
+          </section>
+        </section>
+    </main>
+      <!-- /.container -->
+    </body>
+</html>
