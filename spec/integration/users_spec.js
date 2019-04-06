@@ -1,6 +1,6 @@
 const request = require("request");
 const server = require("../../src/server");
-const base = "http://localhost:3000/users/";
+const base = "http://localhost:3000/user/";
 
 describe("routes : user", () => {
   beforeEach(done => {
