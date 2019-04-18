@@ -7,11 +7,17 @@
    Validation errors:
   <ul>
 <% messages.error.forEach((err) => { %>
-  <li><%= `${err.param} ${err.msg}` %></li>
+  <li>
+    <%= `${err.param} ${err.msg}` %>
+    <%= locals.message %>
+  </li>
   <% }) %>
 </ul>
 <% } else { %>
-  <p><%= messages.notice %></p>
+  <p>
+    <%= messages.notice %>
+    <%= locals.message %>
+  </p>
   <% } %>
 </div>
 <% } %>
