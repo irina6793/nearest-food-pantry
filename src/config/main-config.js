@@ -4,7 +4,7 @@ const viewsFolder = path.join(__dirname, "..", "views");
 const bodyParser = require("body-parser");
 const expressValidator = require("express-validator");
 const logger = require("morgan");
-const flash = require("express-flash-notification");
+const flash = require("express-flash");
 const cookieParser = require("cookie-parser");
 const passportConfig = require("./passport-config");
 const session = require("express-session");
@@ -19,8 +19,8 @@ module.exports = {
       session({
         secret: process.env.cookieSecret,
         resave: false,
-        saveUninitialized: false,
-        cookie: { maxAge: 1.21e9 } //set cookie to expire in 14 days
+        saveUninitialized: true,
+        cookie: { maxAge: 60000 }
       })
     );
     app.use(flash());
@@ -29,6 +29,11 @@ module.exports = {
       res.locals.currentUser = req.user;
       next();
     });
+
+    //app.all("/express-flash-notification", function(req, res) {
+    //  req.flash("success");
+    //  res.redirect(301, "/");
+    //  });
 
     app.use(express.static(path.join(__dirname, "..", "assets")));
     app.use(logger("dev"));
