@@ -29,5 +29,18 @@ module.exports = {
         });
       }
     });
-  }
+  },
+
+  list(req, res, next) {
+    res.render("user/list", { title: "Food List" });
+  },
+  createList(req, res, next) {
+    let newList = {
+      fooditem1: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
+      passwordConfirmation: req.body.passwordConfirmation,
+      zipcode: req.body.zipcode
+    };
+  })
 };
