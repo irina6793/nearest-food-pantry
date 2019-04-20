@@ -42,5 +42,5 @@ module.exports = {
       passwordConfirmation: req.body.passwordConfirmation,
       zipcode: req.body.zipcode
     };
-  })
+  }
 };
